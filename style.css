@@ -1,0 +1,104 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.section {
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 600px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #5D6D7E;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #AED6F1;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #85C1E9;
+}
+
+#toggle-arrow {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+    color: #007BFF;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+#toggle-arrow:hover {
+    transform: scale(1.2);
+    color: #0056b3;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #5D6D7E;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #F4F6F6;
+    font-size: 16px;
+    color: #333;
+}
+
+#challenge-numbers, #challenge-target {
+    background-color: #FCF3CF;
+    border: 1px solid #F9E79F;
+    text-align: center;
+    font-weight: bold;
+    color: #7D6608;
+}
+
+.alert {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.alert-success {
+    background-color: #D5F5E3;
+    color: #27AE60;
+    border: 1px solid #A9DFBF;
+}
+
+.alert-error {
+    background-color: #FADBD8;
+    color: #CB4335;
+    border: 1px solid #F1948A;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra biểu thức</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="section">
+        <h1 id="game-title">Kiểm Tra Biểu Thức Toán Học</h1>
+        <p id="description">Người chơi có thể thử kiểm tra biểu thức dựa trên dãy số ngẫu nhiên hoặc nhập dãy số của mình để tìm phép tính.</p>
+        <button id="button1" onclick="showSection('section1')">?</button>
+        <button id="button2" onclick="showSection('section2')">!</button>
+        <div id="toggle-arrow" onclick="toggleDescription()">
+            &#8593; <!-- Mũi tên lên -->
+        </div>
+    </div>
+
+    <div class="section" id="section1" style="display: none;">
+        <h2>Section 1: Đố người chơi</h2>
+        <label for="challenge-numbers">Dãy số được cung cấp (cách nhau bởi dấu phẩy):</label>
+        <input type="text" id="challenge-numbers" readonly>
+        <br>
+        <label for="challenge-target">Kết quả mong muốn:</label>
+        <input type="number" id="challenge-target" readonly>
+        <br>
+        <label for="player-input">Biểu thức của bạn:</label>
+        <input type="text" id="player-input" placeholder="Nhập biểu thức">
+        <br>
+        <button onclick="checkPlayerExpression()">Kiểm tra biểu thức</button>
+        <div id="result-challenge"></div>
+    </div>
+
+    <div class="section" id="section2" style="display: none;">
+        <h2>Section 2: Tìm phép tính đúng</h2>
+        <label for="numbers">Nhập dãy số (cách nhau bởi dấu phẩy):</label>
+        <input type="text" id="numbers" placeholder="1,2,3">
+        <br>
+        <label for="target">Nhập kết quả mong muốn:</label>
+        <input type="number" id="target" placeholder="4">
+        <br>
+        <button onclick="findExpressions()">Tìm phép tính</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="toggle.js"></script>
+    <script src="section1.js"></script>
+    <script src="section2.js"></script>
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('section1').style.display = 'none';
+            document.getElementById('section2').style.display = 'none';
+            document.getElementById(sectionId).style.display = 'block';
+            if (sectionId === 'section1') {
+                initializeChallenge();
+            }
+        }
+        window.onload = function () {
+            showSection('section2');
+            initializeChallenge();
+        }
+    </script>
+</body>
+</html>
